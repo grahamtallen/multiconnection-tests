@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {setIceServers} from './services/iceServers.js';
-const SERVER_URL = window.location.origin;
+const localdev = true;
+const SERVER_URL = localdev ? "http://localhost:4200" : window.location.origin;
 
 var RTCMultiConnection;
 try {
